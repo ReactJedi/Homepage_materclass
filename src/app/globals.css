@@ -81,9 +81,9 @@
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
+  --card: oklch(1 0 0 / 10%);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
+  --popover: oklch(1 0 0 / 10%);
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.922 0 0);
   --primary-foreground: oklch(0.205 0 0);
@@ -121,37 +121,36 @@
   }
 }
 
-/* Custom wheel of fortune styles */
-.wheel-segment {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* Solar System Radar styles */
+.radar-blip {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, scale, opacity;
+}
+
+.radar-blip:hover {
+  filter: brightness(1.6);
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.8);
+  z-index: 20;
+}
+
+/* Scanner sweep effect */
+.radar-scanner {
+  transition: all 0.3s ease-in-out;
   will-change: transform;
 }
 
-.wheel-segment:hover {
-  filter: brightness(1.2);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+/* Radar grid lines */
+.radar-grid-line {
+  transition: opacity 0.3s ease-in-out;
+  will-change: opacity;
 }
 
-/* Smooth rotation animation */
-.wheel-container {
-  transform-style: preserve-3d;
-  will-change: transform;
+.radar-grid-line:hover {
+  opacity: 0.8;
 }
 
-/* Glowing center effect */
-.wheel-center {
-  box-shadow: 
-    0 0 20px rgba(168, 85, 247, 0.6),
-    0 0 40px rgba(236, 72, 153, 0.4),
-    0 0 60px rgba(168, 85, 247, 0.2);
-}
-
-/* Outer ring animation */
-.outer-ring {
-  animation: pulse-ring 3s ease-in-out infinite;
-}
-
-@keyframes pulse-ring {
+/* Concentric circles animation - orbit paths */
+@keyframes radar-pulse {
   0%, 100% {
     opacity: 0.3;
     transform: scale(1);
@@ -160,6 +159,10 @@
     opacity: 0.6;
     transform: scale(1.02);
   }
+}
+
+.radar-circle {
+  animation: radar-pulse 4s ease-in-out infinite;
 }
 
 /* Text gradient animation */
@@ -176,3 +179,111 @@
     background-position: 100% 50%;
   }
 }
+
+/* Planet pulse effect - solar system style */
+@keyframes planet-pulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(74, 222, 128, 0.8), 0 0 25px rgba(74, 222, 128, 0.4);
+    transform: scale(1.1);
+  }
+}
+
+.radar-blip {
+  animation: planet-pulse 4s ease-in-out infinite;
+}
+
+/* Scanner glow effect - green like in the photo */
+@keyframes scanner-glow {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(74, 222, 128, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(74, 222, 128, 0.7);
+  }
+}
+
+.radar-scanner {
+  animation: scanner-glow 2s ease-in-out infinite;
+}
+
+/* Center sun glow effect */
+@keyframes sun-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(251, 191, 36, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(251, 191, 36, 1), 0 0 45px rgba(251, 191, 36, 0.6);
+  }
+}
+
+.radar-center {
+  animation: sun-glow 3s ease-in-out infinite;
+}
+
+/* Outer ring pulse */
+@keyframes outer-pulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.01);
+  }
+}
+
+.outer-ring {
+  animation: outer-pulse 5s ease-in-out infinite;
+}
+
+/* Planet ring effect */
+@keyframes ring-rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.radar-blip .border {
+  animation: ring-rotate 20s linear infinite;
+}
+
+/* Enhanced tooltip for planets */
+.radar-blip[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 30;
+  margin-bottom: 10px;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  box-shadow: 0 0 10px rgba(74, 222, 128, 0.2);
+}
+
+/* Solar system orbit path glow */
+@keyframes orbit-glow {
+  0%, 100% {
+    border-color: rgba(74, 222, 128, 0.3);
+  }
+  50% {
+    border-color: rgba(74, 222, 128, 0.6);
+  }
+}
+
+.radar-circle {
+  animation: radar-pulse 4s ease-in-out infinite, orbit-glow 6s ease-in-out infinite;
+}
+
