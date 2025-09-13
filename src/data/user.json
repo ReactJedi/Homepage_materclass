@@ -1,0 +1,38 @@
+{
+  "id": "user_001",
+  "profile": {
+    "firstName": "Max",
+    "lastName": "Müller",
+    "email": "max.mueller@example.com",
+    "phone": "+49 6151 123456",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+  },
+  "location": {
+    "address": "Hochschulstraße 1, 64289 Darmstadt, Germany",
+    "city": "Darmstadt",
+    "postalCode": "64289",
+    "country": "Germany",
+    "coordinates": {
+      "lat": 49.8728,
+      "lng": 8.6512
+    }
+  },
+  "preferences": {
+    "maxDistance": 50,
+    "preferredServices": ["Software Development", "Web Development", "Digital Marketing"],
+    "budgetRange": {
+      "min": 100,
+      "max": 300,
+      "currency": "EUR"
+    },
+    "language": "de",
+    "timezone": "Europe/Berlin"
+  },
+  "subscription": {
+    "plan": "premium",
+    "status": "active",
+    "expiresAt": "2024-12-31T23:59:59Z"
+  },
+  "lastLogin": "2024-01-15T10:30:00Z",
+  "createdAt": "2023-06-01T00:00:00Z"
+}

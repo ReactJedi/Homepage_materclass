@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "SAP SE",
+    "address": "Dietmar-Hopp-Allee 16, 69190 Walldorf, Germany",
+    "price": "€200/hour",
+    "service": "Enterprise Software",
+    "coordinates": {
+      "lat": 49.2944,
+      "lng": 8.6425
+    },
+    "location": "Walldorf"
+  },
+  {
+    "id": 2,
+    "name": "Merck KGaA",
+    "address": "Frankfurter Straße 250, 64293 Darmstadt, Germany",
+    "price": "€180/hour",
+    "service": "Pharmaceuticals & Chemicals",
+    "coordinates": {
+      "lat": 49.8728,
+      "lng": 8.6512
+    },
+    "location": "Darmstadt"
+  },
+  {
+    "id": 3,
+    "name": "Software AG",
+    "address": "Uhlandstraße 12, 64297 Darmstadt, Germany",
+    "price": "€160/hour",
+    "service": "Business Software",
+    "coordinates": {
+      "lat": 49.8717,
+      "lng": 8.6494
+    },
+    "location": "Darmstadt"
+  },
+  {
+    "id": 4,
+    "name": "Deutsche Telekom AG",
+    "address": "Friedrich-Ebert-Allee 140, 53113 Bonn, Germany",
+    "price": "€150/hour",
+    "service": "Telecommunications",
+    "coordinates": {
+      "lat": 50.7374,
+      "lng": 7.0982
+    },
+    "location": "Bonn"
+  },
+  {
+    "id": 5,
+    "name": "BASF SE",
+    "address": "Carl-Bosch-Straße 38, 67056 Ludwigshafen am Rhein, Germany",
+    "price": "€170/hour",
+    "service": "Chemical Manufacturing",
+    "coordinates": {
+      "lat": 49.4875,
+      "lng": 8.4662
+    },
+    "location": "Ludwigshafen"
+  },
+  {
+    "id": 6,
+    "name": "Boehringer Ingelheim",
+    "address": "Binger Straße 173, 55216 Ingelheim am Rhein, Germany",
+    "price": "€190/hour",
+    "service": "Pharmaceuticals",
+    "coordinates": {
+      "lat": 49.9747,
+      "lng": 8.0583
+    },
+    "location": "Ingelheim"
+  },
+  {
+    "id": 7,
+    "name": "Continental AG",
+    "address": "Vahrenwalder Straße 9, 30165 Hannover, Germany",
+    "price": "€140/hour",
+    "service": "Automotive Parts",
+    "coordinates": {
+      "lat": 52.3759,
+      "lng": 9.7320
+    },
+    "location": "Hannover"
+  },
+  {
+    "id": 8,
+    "name": "Volkswagen AG",
+    "address": "Berliner Ring 2, 38440 Wolfsburg, Germany",
+    "price": "€130/hour",
+    "service": "Automotive Manufacturing",
+    "coordinates": {
+      "lat": 52.4226,
+      "lng": 10.7865
+    },
+    "location": "Wolfsburg"
+  },
+  {
+    "id": 9,
+    "name": "Bayer AG",
+    "address": "Kaiser-Wilhelm-Allee 1, 51373 Leverkusen, Germany",
+    "price": "€175/hour",
+    "service": "Pharmaceuticals & Chemicals",
+    "coordinates": {
+      "lat": 51.0303,
+      "lng": 6.9843
+    },
+    "location": "Leverkusen"
+  },
+  {
+    "id": 10,
+    "name": "Adidas AG",
+    "address": "Adi-Dassler-Straße 1, 91074 Herzogenaurach, Germany",
+    "price": "€120/hour",
+    "service": "Sportswear Manufacturing",
+    "coordinates": {
+      "lat": 49.5680,
+      "lng": 10.8850
+    },
+    "location": "Herzogenaurach"
+  }
+]
